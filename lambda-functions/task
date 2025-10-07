@@ -1,0 +1,30 @@
+1. Easy
+Given a list of numbers nums = [2, 5, 8, 11, 14].
+Filter only even numbers using filter and lambda.
+Expected result: [2, 8, 14]
+
+2. Medium
+Given a list names = ["alice", "BOB", "ChArLiE"].
+Using map and lambda, make all names start with a capital letter and the rest lowercase.
+Expected result: ['Alice', 'Bob', 'Charlie']
+
+3. Medium+
+Given a list nums = [3, 6, 9, 12].
+Using reduce and lambda, calculate the product of all elements.
+Expected result: 1944
+
+4. Hard
+Given a list of words words = ["python", "is", "really", "powerful"].
+Sort it by word length in descending order using sorted and lambda.
+Expected result: ['powerful', 'really', 'python', 'is']
+
+5. Challenge
+Given a list of dictionaries:
+people = [
+    {"name": "Alice", "age": 25},
+    {"name": "Bob", "age": 19},
+    {"name": "Charlie", "age": 30}
+]
+Using filter and lambda, select only those whose age >= 21,
+then use map to get a list of their names.
+Expected result: ['Alice', 'Charlie']
