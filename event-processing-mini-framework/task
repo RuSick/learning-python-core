@@ -1,0 +1,28 @@
+Topic: Decorators, Closures, and Dataclasses
+Task name: Decorators Practice Module
+
+Task Description:
+Implement a small educational project named “Decorators Practice Module” that demonstrates and reinforces the concepts of decorators, closures, and dataclasses in Python. The project should simulate a minimal event-processing framework where events are represented as structured data and processed through decorated functions and classes.
+
+Your implementation must include:
+
+Dataclasses:
+Create an Event dataclass with fields such as id, payload, tags, priority, and meta. Demonstrate safe defaults using field(default_factory=...). Add ordering and a computed @property (is_high_priority) with getter/setter logic. Create an additional Config dataclass showing comparison and a custom helper method.
+
+Function decorators and closures:
+Implement a @timed decorator that measures execution time and uses functools.wraps to preserve metadata. Create a parameterized decorator @retry(retries, exceptions, backoff_ms) using closures. Add a validation decorator @validate(schema, strict) to check event payloads. Write a rate limiter factory make_rate_limiter(max_per_minute) returning a decorator that throttles function calls using nonlocal state.
+
+Class decorators:
+Implement a @register_processor(name=None, inject_call=True) class decorator that registers processor classes and dynamically adds or wraps the call method.
+
+Property and magic methods:
+Use the @property decorator to control access and validation for priority. Create a small demo class showing the difference between getattribute and getitem.
+
+Integration example:
+Combine all parts into a working example where an event passes through a decorated processor class (ArticleProcessor). The processor should apply timing, retry, validation, and rate-limiting decorators in a logical order. Demonstrate that function metadata is preserved, retries work, validation errors are handled, and dataclass ordering behaves as expected.
+
+Testing goals:
+Verify that decorators preserve name and doc. Confirm retry attempts the correct number of times. Validate schema behavior under strict and non-strict modes. Test rate-limiting delay, dataclass ordering, and class registration logic.
+
+Expected Outcome:
+By completing this module, you should demonstrate a solid understanding of how Python implements decorators and closures, how metadata and scope are preserved with functools.wraps, how dataclasses simplify data modeling and comparison, how class decorators and properties alter object behavior, and how these mechanisms can be integrated into a cohesive, testable mini-framework.
